@@ -1,0 +1,560 @@
+{
+  "anthropicAuthPreference": "api-key",
+  "themeMode": "system",
+  "colorTheme": "shadcn-ember",
+  "dashboardFontScalePct": 100,
+  "autoBackupEnabled": false,
+  "autoBackupSchedule": "0 2 * * *",
+  "autoBackupRetention": 7,
+  "autoBackupDir": ".fusion/backups",
+  "localNetworkDiscoveryEnabled": true,
+  "dashboardKeyboardShortcuts": {
+    "quickChat": "Space",
+    "terminal": "Ctrl+`",
+    "openFiles": "Ctrl+E",
+    "openSettings": "Ctrl+,",
+    "openCommandCenter": "Ctrl+K",
+    "newTask": "Ctrl+Shift+N"
+  },
+  "dismissModalsOnOutsideClick": false,
+  "skipConfirmationDialogs": false,
+  "quickAddSubmitOnEnter": true,
+  "defaultProvider": "openrouter",
+  "defaultModelId": "minimax/minimax-m3.1-flash:free",
+  "mergeRequestContractShadowEnabled": false,
+  "ntfyEnabled": false,
+  "agentClarificationEnabled": false,
+  "ntfyEvents": [
+    "in-review",
+    "merged",
+    "failed",
+    "awaiting-approval",
+    "awaiting-user-review",
+    "planning-awaiting-input",
+    "cli-agent-awaiting-input",
+    "message:agent-to-user",
+    "message:agent-to-agent",
+    "message:room",
+    "gridlock",
+    "board-stall-unrecovered",
+    "fallback-used",
+    "memory-dreams-processed",
+    "token-budget"
+  ],
+  "failureNotificationDelayMs": 30000,
+  "wedgeNotificationSettleMs": 300000,
+  "failureNotificationMode": "sticky-only",
+  "webhookEnabled": false,
+  "webhookFormat": "generic",
+  "webhookEvents": [],
+  "notificationProviders": [],
+  "customProviders": [
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "apiType": "openai-compatible",
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "apiKey": "[REDACTED_FOR_BACKUP]",
+      "supportsDeveloperRole": true,
+      "models": [
+        {
+          "id": "minimax/minimax-m3.1-flash:free",
+          "name": "MiniMax: MiniMax M3.1 Flash (free)"
+        },
+        {
+          "id": "deepseek/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek: DeepSeek V4.1 Flash 1017"
+        },
+        {
+          "id": "elorian/glimpse",
+          "name": "Elorian: Glimpse"
+        },
+        {
+          "id": "xingchen-agi/xing4.0-29b-a4b:free",
+          "name": "XingChen: Xing4.0 29B A4B (free)"
+        },
+        {
+          "id": "reflection/beam-1.0-501b-a23b",
+          "name": "Reflection: Beam 1.0 501B A23B"
+        },
+        {
+          "id": "inception/mercury-3",
+          "name": "Inception: Mercury 3"
+        },
+        {
+          "id": "moondream/moondream3-preview",
+          "name": "Moondream: Moondream 3 Preview"
+        },
+        {
+          "id": "moondream/moondream3.1-9b-a2b",
+          "name": "Moondream: Moondream 3.1"
+        },
+        {
+          "id": "meta/muse-spark-open",
+          "name": "Meta: Muse Spark Open"
+        },
+        {
+          "id": "nvidia/nemotron-3.5-super-vl",
+          "name": "NVIDIA: Nemotron 3.5 Super VL"
+        },
+        {
+          "id": "nvidia/nemotron-3.5-super-vl:free",
+          "name": "NVIDIA: Nemotron 3.5 Super VL (free)"
+        },
+        {
+          "id": "unbiased/pareto-26.10",
+          "name": "Pareto 26.10"
+        },
+        {
+          "id": "~unbiased/pareto-latest",
+          "name": "Pareto Latest"
+        },
+        {
+          "id": "unbiased/pareto-26.9",
+          "name": "Pareto 26.9"
+        },
+        {
+          "id": "liquid/lfm-2.5-24b-a2b",
+          "name": "LiquidAI: LFM2.5-24B-A2B"
+        },
+        {
+          "id": "google/gemini-4-argon",
+          "name": "Google: Gemini 4 Argon"
+        },
+        {
+          "id": "google/gemini-4-argon:batch",
+          "name": "Google: Gemini 4 Argon (batch)"
+        },
+        {
+          "id": "scaledown/summarize",
+          "name": "ScaleDown: Summarize"
+        },
+        {
+          "id": "scaledown/extract",
+          "name": "ScaleDown: Extract"
+        },
+        {
+          "id": "meta/muse-wonder",
+          "name": "Meta: Muse Wonder"
+        },
+        {
+          "id": "stepfun/step-5-preview",
+          "name": "StepFun: Step 5 Preview"
+        },
+        {
+          "id": "anthropic/claude-haiku-5.5",
+          "name": "Anthropic: Claude Haiku 5.5"
+        },
+        {
+          "id": "anthropic/claude-haiku-5.5:batch",
+          "name": "Anthropic: Claude Haiku 5.5 (batch)"
+        },
+        {
+          "id": "google/gemini-nano-banana-2.1",
+          "name": "Google: Nano Banana 2.1"
+        },
+        {
+          "id": "mistralai/mistral-large-4-0",
+          "name": "Mistral: Mistral Large 4"
+        },
+        {
+          "id": "inclusionai/ling-3.1-flash",
+          "name": "inclusionAI: Ling 3.1 Flash"
+        },
+        {
+          "id": "openai/gpt-6.1-sol-pro",
+          "name": "OpenAI: GPT-6.1 Sol Pro"
+        },
+        {
+          "id": "openai/gpt-6.1-sol-pro:batch",
+          "name": "OpenAI: GPT-6.1 Sol Pro (batch)"
+        },
+        {
+          "id": "openai/gpt-6.1-sol",
+          "name": "OpenAI: GPT-6.1 Sol"
+        },
+        {
+          "id": "openai/gpt-6.1-sol:batch",
+          "name": "OpenAI: GPT-6.1 Sol (batch)"
+        },
+        {
+          "id": "anthropic/claude-sonnet-5.5",
+          "name": "Anthropic: Claude Sonnet 5.5"
+        },
+        {
+          "id": "anthropic/claude-sonnet-5.5:batch",
+          "name": "Anthropic: Claude Sonnet 5.5 (batch)"
+        },
+        {
+          "id": "typesafe/jev-router",
+          "name": "TypeSafe: Jev Router"
+        },
+        {
+          "id": "perceptron/perceptron-mk1.5",
+          "name": "Perceptron: Perceptron Mk1.5"
+        },
+        {
+          "id": "fireworks/ember-1",
+          "name": "Fireworks: Ember-1"
+        },
+        {
+          "id": "z-ai/glm-5.3-prime",
+          "name": "Z.ai: GLM 5.3 Prime"
+        },
+        {
+          "id": "qwen/qwen3.8-max-prime",
+          "name": "Qwen: Qwen3.8 Max Prime"
+        },
+        {
+          "id": "aion-labs/aion-3.5-mini",
+          "name": "AionLabs: Aion 3.5 Mini"
+        },
+        {
+          "id": "aion-labs/aion-3.5",
+          "name": "AionLabs: Aion 3.5"
+        },
+        {
+          "id": "upstage/solar-mini4",
+          "name": "Upstage: Solar Mini 4"
+        },
+        {
+          "id": "cohere/command-a-plus",
+          "name": "Cohere: Command A+"
+        },
+        {
+          "id": "openai/gpt-6-luna-pro",
+          "name": "OpenAI: GPT-6 Luna Pro"
+        },
+        {
+          "id": "openai/gpt-6-luna-pro:batch",
+          "name": "OpenAI: GPT-6 Luna Pro (batch)"
+        },
+        {
+          "id": "openai/gpt-6-luna",
+          "name": "OpenAI: GPT-6 Luna"
+        },
+        {
+          "id": "openai/gpt-6-luna:batch",
+          "name": "OpenAI: GPT-6 Luna (batch)"
+        },
+        {
+          "id": "openai/gpt-6-sol-pro",
+          "name": "OpenAI: GPT-6 Sol Pro"
+        },
+        {
+          "id": "openai/gpt-6-sol-pro:batch",
+          "name": "OpenAI: GPT-6 Sol Pro (batch)"
+        },
+        {
+          "id": "openai/gpt-6-sol",
+          "name": "OpenAI: GPT-6 Sol"
+        },
+        {
+          "id": "openai/gpt-6-sol:batch",
+          "name": "OpenAI: GPT-6 Sol (batch)"
+        },
+        {
+          "id": "anthropic/claude-opus-5.5",
+          "name": "Anthropic: Claude Opus 5.5"
+        },
+        {
+          "id": "anthropic/claude-opus-5.5:batch",
+          "name": "Anthropic: Claude Opus 5.5 (batch)"
+        },
+        {
+          "id": "nvidia/switchyard",
+          "name": "NVIDIA: Switchyard"
+        },
+        {
+          "id": "xiaomi/mimo-v2.6-pro-ultraspeed",
+          "name": "Xiaomi: MiMo-V2.6-Pro-UltraSpeed"
+        },
+        {
+          "id": "xiaomi/mimo-v2.6-flash",
+          "name": "Xiaomi: MiMo-V2.6-Flash"
+        },
+        {
+          "id": "xiaomi/mimo-v2.6-pro",
+          "name": "Xiaomi: MiMo-V2.6-Pro"
+        },
+        {
+          "id": "x-ai/grok-4.7",
+          "name": "SpaceXAI: Grok 4.7"
+        },
+        {
+          "id": "qwen/qwen3.8-omni-flash",
+          "name": "Qwen: Qwen3.8 Omni Flash"
+        },
+        {
+          "id": "prism-ml/ternary-bonsai-2-27b",
+          "name": "PrismML: Ternary Bonsai 2 27B"
+        },
+        {
+          "id": "z-ai/glm-5.3-flashx",
+          "name": "Z.ai: GLM 5.3 FlashX"
+        },
+        {
+          "id": "~deepseek/deepseek-pro-latest",
+          "name": "DeepSeek: DeepSeek Pro Latest"
+        },
+        {
+          "id": "~deepseek/deepseek-flash-latest",
+          "name": "DeepSeek: DeepSeek Flash Latest"
+        },
+        {
+          "id": "inference-net/schematron-v2-turbo",
+          "name": "Inference.net: Schematron V2 Turbo"
+        },
+        {
+          "id": "inference-net/schematron-v2-small",
+          "name": "Inference.net: Schematron V2 Small"
+        },
+        {
+          "id": "~openai/gpt-astra-latest",
+          "name": "OpenAI: GPT Astra Latest"
+        },
+        {
+          "id": "~openai/gpt-sol-latest",
+          "name": "OpenAI: GPT Sol Latest"
+        },
+        {
+          "id": "~openai/gpt-terra-latest",
+          "name": "OpenAI: GPT Terra Latest"
+        },
+        {
+          "id": "~openai/gpt-luna-latest",
+          "name": "OpenAI: GPT Luna Latest"
+        },
+        {
+          "id": "sakana/fugu-ultra-v2",
+          "name": "Sakana: Fugu Ultra v2"
+        },
+        {
+          "id": "sakana/fugu-max",
+          "name": "Sakana: Fugu Max"
+        },
+        {
+          "id": "inclusionai/ling-3.0-flash-vl",
+          "name": "inclusionAI: Ling 3.0 Flash VL"
+        },
+        {
+          "id": "deepseek/deepseek-v4.1-flash",
+          "name": "DeepSeek: DeepSeek V4.1 Flash"
+        },
+        {
+          "id": "deepseek/deepseek-v4.1-flash:batch",
+          "name": "DeepSeek: DeepSeek V4.1 Flash (batch)"
+        },
+        {
+          "id": "inception/mercury-2.5",
+          "name": "Inception: Mercury 2.5"
+        },
+        {
+          "id": "nex-agi/nex-n2.5-mini",
+          "name": "Nex AGI: Nex-N2.5-Mini"
+        },
+        {
+          "id": "nex-agi/nex-n2.5-pro",
+          "name": "Nex AGI: Nex-N2.5-Pro"
+        },
+        {
+          "id": "openai/gpt-6-astra",
+          "name": "OpenAI: GPT-6 Astra"
+        },
+        {
+          "id": "openai/gpt-6-astra:batch",
+          "name": "OpenAI: GPT-6 Astra (batch)"
+        },
+        {
+          "id": "openai/gpt-6-astra-pro",
+          "name": "OpenAI: GPT-6 Astra Pro"
+        },
+        {
+          "id": "openai/gpt-6-astra-pro:batch",
+          "name": "OpenAI: GPT-6 Astra Pro (batch)"
+        },
+        {
+          "id": "qwen/qwen3.8-max-0902",
+          "name": "Qwen: Qwen3.8 Max (0902)"
+        },
+        {
+          "id": "meta/muse-spark-1.3-contributor",
+          "name": "Meta: Muse Spark 1.3 Contributor"
+        },
+        {
+          "id": "meta/muse-spark-1.3",
+          "name": "Meta: Muse Spark 1.3"
+        },
+        {
+          "id": "google/gemini-3.8-flash",
+          "name": "Google: Gemini 3.8 Flash"
+        },
+        {
+          "id": "google/gemini-3.8-flash:batch",
+          "name": "Google: Gemini 3.8 Flash (batch)"
+        },
+        {
+          "id": "anthropic/claude-fable-5.1",
+          "name": "Anthropic: Claude Fable 5.1"
+        },
+        {
+          "id": "anthropic/claude-fable-5.1:batch",
+          "name": "Anthropic: Claude Fable 5.1 (batch)"
+        },
+        {
+          "id": "ibm-granite/granite-4.2-8b",
+          "name": "IBM: Granite 4.2 8B"
+        },
+        {
+          "id": "tencent/hy4-preview",
+          "name": "Tencent: Hy4 preview"
+        },
+        {
+          "id": "~z-ai/glm-flash-latest",
+          "name": "Z.ai: GLM Flash Latest"
+        },
+        {
+          "id": "qwen/qwen3.8-flash",
+          "name": "Qwen: Qwen3.8 Flash"
+        },
+        {
+          "id": "z-ai/glm-5.3-flash",
+          "name": "Z.ai: GLM 5.3 Flash"
+        },
+        {
+          "id": "z-ai/glm-5.3-flash:batch",
+          "name": "Z.ai: GLM 5.3 Flash (batch)"
+        },
+        {
+          "id": "meta/muse-spark-1.2-contributor",
+          "name": "Meta: Muse Spark 1.2 Contributor"
+        },
+        {
+          "id": "deepseek/deepseek-v4-flash-vision-exp",
+          "name": "DeepSeek: DeepSeek V4 Flash Vision Exp"
+        },
+        {
+          "id": "tencent/hy-mt2-1.8b",
+          "name": "Tencent: Hy-MT2-1.8B"
+        },
+        {
+          "id": "tencent/hy-mt2-30b-a3b",
+          "name": "Tencent: Hy-MT2-30B-A3B"
+        },
+        {
+          "id": "~z-ai/glm-latest",
+          "name": "Z.ai: GLM Latest"
+        },
+        {
+          "id": "tencent/hy-mt2-7b",
+          "name": "Tencent: Hy-MT2-7B"
+        },
+        {
+          "id": "z-ai/glm-5.3",
+          "name": "Z.ai: GLM 5.3"
+        },
+        {
+          "id": "z-ai/glm-5.3:batch",
+          "name": "Z.ai: GLM 5.3 (batch)"
+        }
+      ]
+    }
+  ],
+  "githubStarPromptDismissedAt": "2026-10-21T09:13:11.480Z",
+  "openrouterModelSync": true,
+  "orcarouterModelSync": true,
+  "opencodeGoModelSync": true,
+  "updateCheckEnabled": true,
+  "fnBinaryCheckEnabled": true,
+  "updateCheckFrequency": "daily",
+  "updateChannel": "stable",
+  "autoUpdateAndRestart": false,
+  "modelOnboardingComplete": true,
+  "daemonPort": 4040,
+  "daemonHost": "127.0.0.1",
+  "settingsSyncEnabled": false,
+  "settingsSyncAuth": false,
+  "settingsSyncInterval": 900000,
+  "settingsSyncConflictResolution": "last-write-wins",
+  "dashboardCurrentProjectIdByNode": {
+    "local": "proj_1a935d52eb844e74"
+  },
+  "vitestAutoKillEnabled": true,
+  "vitestKillThresholdPct": 90,
+  "persistAgentToolOutput": true,
+  "proactiveTaskChatEnabled": false,
+  "persistAgentThinkingLogPermanent": false,
+  "persistAgentThinkingLogEphemeral": false,
+  "persistAgentThinkingLog": false,
+  "agentMemoryInclusionMode": "full",
+  "secretsSyncPassphraseConfigured": false,
+  "researchGlobalDefaults": {
+    "enabledSources": {
+      "webSearch": true,
+      "pageFetch": true,
+      "github": false,
+      "localDocs": true,
+      "llmSynthesis": true
+    },
+    "maxSourcesPerRun": 20,
+    "defaultExportFormat": "markdown"
+  },
+  "researchGlobalEnabled": true,
+  "researchGlobalMaxConcurrentRuns": 3,
+  "researchGlobalDefaultTimeout": 300000,
+  "researchGlobalMaxSourcesPerRun": 20,
+  "researchGlobalMaxSynthesisRounds": 2,
+  "researchGlobalWebSearchProvider": "builtin",
+  "researchGlobalGitHubEnabled": false,
+  "researchGlobalLocalDocsEnabled": true,
+  "researchGlobalMaxSearchResults": 10,
+  "researchGlobalFetchTimeoutMs": 30000,
+  "researchGlobalUserAgent": "FusionResearchBot/1.0",
+  "mcpServers": {
+    "enabled": false,
+    "servers": []
+  },
+  "remoteAccess": {
+    "activeProvider": null,
+    "providers": {
+      "tailscale": {
+        "enabled": false,
+        "hostname": "",
+        "targetPort": 0,
+        "acceptRoutes": false
+      },
+      "cloudflare": {
+        "enabled": false,
+        "quickTunnel": true,
+        "tunnelName": "",
+        "tunnelToken": null,
+        "ingressUrl": ""
+      }
+    },
+    "tokenStrategy": {
+      "persistent": {
+        "enabled": true,
+        "token": null
+      },
+      "shortLived": {
+        "enabled": false,
+        "ttlMs": 900000,
+        "maxTtlMs": 86400000
+      }
+    },
+    "lifecycle": {
+      "rememberLastRunning": false,
+      "wasRunningOnShutdown": false,
+      "lastRunningProvider": null
+    }
+  },
+  "worktrunk": {
+    "enabled": false,
+    "onFailure": "fail"
+  },
+  "owningNodeHandoffPolicy": "reassign-to-local",
+  "experimentalFeatures": {
+    "workflowInterpreterDualObserve": false
+  },
+  "cliAgents": {}
+}

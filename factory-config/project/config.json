@@ -1,0 +1,8 @@
+{
+  "executionProvider": "custom:openrouter",
+  "executionModelId": "minimax/minimax-m3.1-flash:free",
+  "planningProvider": "custom:openrouter",
+  "planningModelId": "minimax/minimax-m3.1-flash:free",
+  "validatorProvider": "custom:openrouter",
+  "validatorModelId": "minimax/minimax-m3.1-flash:free"
+}
