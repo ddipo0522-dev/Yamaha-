@@ -1,16 +1,26 @@
 [Unit]
 Description=Fusion Dashboard
 After=network.target
+Wants=network.target
 
 [Service]
 Type=simple
 User=ubuntu
+Group=ubuntu
 WorkingDirectory=/home/ubuntu/Yamaha-
-Environment=PATH=/home/ubuntu/.local/bin:/home/ubuntu/bin:/usr/local/bin:/usr/bin:/bin
+# Ensure PATH includes npm global bin where fn is installed
+Environment=PATH=/home/ubuntu/.npm-global/bin:/home/ubuntu/.local/bin:/home/ubuntu/bin:/usr/local/bin:/usr/bin:/bin
+# Note: Fusion v0.77.0 does NOT auto-load .env files
+# Configure via ~/.fusion/settings.json or environment variables
 EnvironmentFile=-/home/ubuntu/Yamaha-/.env
-ExecStart=/usr/bin/env fn dashboard
-Restart=always
-RestartSec=5
+ExecStart=/home/ubuntu/.npm-global/bin/fn dashboard
+# Create required directories
+ExecStartPre=/bin/mkdir -p /home/ubuntu/.fusion/logs /home/ubuntu/Yamaha-/.fusion/logs
+Restart=on-failure
+RestartSec=10
+StartLimitIntervalSec=300
+StartLimitBurst=5
+# Logs
 StandardOutput=append:/home/ubuntu/.fusion/logs/fusion-dashboard.service.log
 StandardError=append:/home/ubuntu/.fusion/logs/fusion-dashboard.service.log
 

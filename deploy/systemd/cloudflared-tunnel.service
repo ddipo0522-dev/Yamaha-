@@ -1,16 +1,22 @@
 [Unit]
 Description=Cloudflare Tunnel for Fusion Factory
-After=network.target fusion-dashboard.service
+After=network-online.target fusion-dashboard.service
+Wants=network-online.target
 Requires=fusion-dashboard.service
+StartLimitIntervalSec=300
+StartLimitBurst=5
 
 [Service]
 Type=simple
 User=ubuntu
+Group=ubuntu
 Environment=PATH=/home/ubuntu/.local/bin:/home/ubuntu/bin:/usr/local/bin:/usr/bin:/bin
 EnvironmentFile=-/home/ubuntu/Yamaha-/.env
-ExecStart=/usr/bin/env cloudflared tunnel --url http://localhost:4040
-Restart=always
-RestartSec=5
+# Use named tunnel with token if CLOUDFLARE_TUNNEL_TOKEN is set, otherwise quick tunnel
+ExecStartPre=/bin/bash -c 'if [ -z "${CLOUDFLARE_TUNNEL_TOKEN:-}" ]; then echo "WARNING: No CLOUDFLARE_TUNNEL_TOKEN set, using quick tunnel"; fi'
+ExecStart=/usr/bin/env cloudflared tunnel --url http://127.0.0.1:4040
+Restart=on-failure
+RestartSec=10
 StandardOutput=append:/home/ubuntu/.fusion/logs/cloudflared-tunnel.service.log
 StandardError=append:/home/ubuntu/.fusion/logs/cloudflared-tunnel.service.log
 
