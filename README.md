@@ -71,3 +71,17 @@ It is covered by `tests/test_hello_txt.py`, which is part of the same suite:
 ```bash
 python3 -m unittest discover -s tests -t . -v
 ```
+
+## Continuous integration
+
+The GitHub Actions workflow in `.github/workflows/ci.yml` runs the same
+command on every push and every pull request:
+`python3 -m unittest discover -s tests -t . -v`.
+
+A failing test fails the workflow, so a red test blocks the change from being
+merged. The workflow uses only the publicly available `actions/checkout` and
+`actions/setup-python` actions and requires no secrets, tokens, or paid
+services.
+
+The workflow's contract is asserted by `tests/test_ci_workflow.py`, so the
+command CI runs cannot silently drift away from the one documented above.
