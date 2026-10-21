@@ -1,0 +1,18 @@
+[Unit]
+Description=Fusion Dashboard
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/Yamaha-
+Environment=PATH=/home/ubuntu/.local/bin:/home/ubuntu/bin:/usr/local/bin:/usr/bin:/bin
+EnvironmentFile=-/home/ubuntu/Yamaha-/.env
+ExecStart=/usr/bin/env fn dashboard
+Restart=always
+RestartSec=5
+StandardOutput=append:/home/ubuntu/.fusion/logs/fusion-dashboard.service.log
+StandardError=append:/home/ubuntu/.fusion/logs/fusion-dashboard.service.log
+
+[Install]
+WantedBy=multi-user.target

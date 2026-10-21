@@ -1,0 +1,18 @@
+[Unit]
+Description=Cloudflare Tunnel for Fusion Factory
+After=network.target fusion-dashboard.service
+Requires=fusion-dashboard.service
+
+[Service]
+Type=simple
+User=ubuntu
+Environment=PATH=/home/ubuntu/.local/bin:/home/ubuntu/bin:/usr/local/bin:/usr/bin:/bin
+EnvironmentFile=-/home/ubuntu/Yamaha-/.env
+ExecStart=/usr/bin/env cloudflared tunnel --url http://localhost:4040
+Restart=always
+RestartSec=5
+StandardOutput=append:/home/ubuntu/.fusion/logs/cloudflared-tunnel.service.log
+StandardError=append:/home/ubuntu/.fusion/logs/cloudflared-tunnel.service.log
+
+[Install]
+WantedBy=multi-user.target
