@@ -58,3 +58,16 @@ The suite can also be run directly:
 ```bash
 python3 -m unittest tests.test_calculator
 ```
+
+## Factory verification
+
+`hello.txt` at the repository root contains exactly the single line
+`Fusion factory verification complete`. It is the Fusion factory's
+end-to-end verification artifact: a byte-for-byte predictable file that any
+fresh agent or CI run can check with one command.
+
+It is covered by `tests/test_hello_txt.py`, which is part of the same suite:
+
+```bash
+python3 -m unittest discover -s tests -t . -v
+```
