@@ -85,3 +85,21 @@ services.
 
 The workflow's contract is asserted by `tests/test_ci_workflow.py`, so the
 command CI runs cannot silently drift away from the one documented above.
+
+## Backup and recovery
+
+Every Kilo chat, the full Git history, and the Fusion factory runtime state are
+archived together and uploaded to the GitHub release `backup-2026-10-21`.
+
+- `kilo-sessions/` — human-readable transcripts plus raw JSON of every Kilo
+  session in this repository, indexed by `kilo-sessions/README.md`.
+- `scripts/backup/export_sessions.py` — re-exports the chat transcripts from
+  `~/.local/share/kilo/kilo.db`.
+- `scripts/backup/backup_all.sh` — rebuilds the full environment archive
+  (project, Kilo data, Fusion state, checksums).
+- `BACKUP_MANIFEST.md` — what was saved, what was excluded, and how to restore.
+
+```bash
+python3 scripts/backup/export_sessions.py kilo-sessions
+bash scripts/backup/backup_all.sh
+```
